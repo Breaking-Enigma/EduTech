@@ -1,0 +1,336 @@
+.assessment-page {
+  padding-top: 0;
+}
+
+.assessment-hero {
+  position: relative;
+  height: 42vh;
+  min-height: 280px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.assessment-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.assessment-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20,30,22,0.88) 0%, rgba(20,30,22,0.45) 60%, transparent 100%);
+}
+
+.assessment-hero-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 48px 80px;
+  max-width: 700px;
+}
+
+.assessment-hero-text h1 {
+  font-size: clamp(30px, 4vw, 50px);
+  color: #fff;
+  margin: 10px 0 12px;
+}
+
+.assessment-hero-text h1 em {
+  font-style: italic;
+  color: var(--sage-light);
+}
+
+.assessment-hero-text p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 300;
+}
+
+.assessment-body {
+  background: var(--cream);
+  padding: 60px 0 100px;
+}
+
+.assessment-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Progress bar */
+.progress-track {
+  position: relative;
+  height: 4px;
+  background: var(--light-gray);
+  border-radius: 2px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--sage);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.progress-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  color: var(--mid-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.progress-dot.active {
+  background: var(--sage);
+  color: #fff;
+}
+
+.step-block h2 {
+  font-size: clamp(26px, 3.5vw, 38px);
+  color: var(--charcoal);
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 15px;
+  color: var(--mid-gray);
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+/* Subject grid */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.subject-card {
+  background: var(--warm-white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.subject-card:hover {
+  border-color: var(--sage-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.subject-card.selected {
+  border-color: var(--sage);
+  background: #EFF5F0;
+}
+
+.subject-icon {
+  font-size: 26px;
+  margin-bottom: 4px;
+  color: var(--charcoal);
+}
+
+.subject-card strong {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--charcoal);
+  display: block;
+}
+
+.subject-card span {
+  font-size: 12.5px;
+  color: var(--mid-gray);
+  font-weight: 300;
+}
+
+/* Goal grid */
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.goal-card {
+  background: var(--warm-white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+.goal-card:hover {
+  border-color: var(--sage-light);
+  transform: translateY(-2px);
+}
+
+.goal-card.selected {
+  border-color: var(--sage);
+  background: #EFF5F0;
+}
+
+.goal-icon {
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--light-gray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--charcoal);
+}
+
+.goal-card.selected .goal-icon {
+  background: var(--sage-light);
+}
+
+.goal-card strong {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+/* Level list */
+.level-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.level-card {
+  background: var(--warm-white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  padding: 22px 28px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.level-card:hover {
+  border-color: var(--sage-light);
+}
+
+.level-card.selected {
+  border-color: var(--sage);
+  background: #EFF5F0;
+}
+
+.level-card strong {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--charcoal);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.level-card span {
+  font-size: 13.5px;
+  color: var(--mid-gray);
+  font-weight: 300;
+}
+
+.level-check {
+  font-size: 18px;
+  color: var(--sage);
+  flex-shrink: 0;
+}
+
+/* Time grid */
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.time-card {
+  background: var(--warm-white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  align-items: center;
+}
+
+.time-card:hover {
+  border-color: var(--sage-light);
+  transform: translateY(-3px);
+}
+
+.time-card.selected {
+  border-color: var(--sage);
+  background: #EFF5F0;
+}
+
+.time-card strong {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.time-card span {
+  font-size: 13px;
+  color: var(--mid-gray);
+  font-weight: 300;
+}
+
+/* Actions */
+.step-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.step-actions .btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .assessment-hero-text { padding: 32px 20px; }
+  .subject-grid { grid-template-columns: repeat(2, 1fr); }
+  .goal-grid { grid-template-columns: 1fr; }
+  .time-grid { grid-template-columns: 1fr; }
+}
