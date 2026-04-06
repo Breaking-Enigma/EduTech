@@ -1,5 +1,6 @@
 {
   "name": "adaptiq",
+  "homepage": "https://breaking-enigma.github.io/EduTech",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -13,7 +14,18 @@
     "build": "react-scripts build"
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
